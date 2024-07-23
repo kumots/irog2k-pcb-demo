@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:irog2k-pcb-demo-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -384,7 +385,7 @@ F 3 "" H 6150 2050 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6450 1850 7100 1850
+	6450 1850 6700 1850
 $Comp
 L Device:Polyfuse_Small F1
 U 1 1 66A0B8E3
@@ -434,30 +435,6 @@ Text GLabel 6450 1950 2    50   Input ~ 0
 D-
 Text GLabel 6450 2050 2    50   Input ~ 0
 D+
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX1
-U 1 1 66A179E7
-P 6900 3150
-F 0 "MX1" H 6933 3373 60  0000 C CNN
-F 1 "MX-NoLED" H 6933 3299 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 6275 3125 60  0001 C CNN
-F 3 "" H 6275 3125 60  0001 C CNN
-	1    6900 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX2
-U 1 1 66A191A2
-P 7500 3150
-F 0 "MX2" H 7533 3373 60  0000 C CNN
-F 1 "MX-NoLED" H 7533 3299 20  0000 C CNN
-F 2 "MX_Alps_Hybrid:MX-1U" H 6875 3125 60  0001 C CNN
-F 3 "" H 6875 3125 60  0001 C CNN
-	1    7500 3150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 7050 3100
-NoConn ~ 7650 3100
 Wire Wire Line
 	6850 3300 6750 3300
 Wire Wire Line
@@ -491,4 +468,52 @@ ROW0
 Connection ~ 6750 3500
 Wire Wire Line
 	6750 3500 6350 3500
+$Comp
+L power:VCC #PWR?
+U 1 1 669F3063
+P 6700 1850
+F 0 "#PWR?" H 6700 1700 50  0001 C CNN
+F 1 "VCC" H 6717 2023 50  0000 C CNN
+F 2 "" H 6700 1850 50  0001 C CNN
+F 3 "" H 6700 1850 50  0001 C CNN
+	1    6700 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6700 1850
+Wire Wire Line
+	6700 1850 7100 1850
+Text GLabel 7050 2800 1    50   Input ~ 0
+COL0
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX1
+U 1 1 66A179E7
+P 6900 3150
+F 0 "MX1" H 6933 3373 60  0000 C CNN
+F 1 "MX-NoLED" H 6933 3299 20  0000 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U" H 6275 3125 60  0001 C CNN
+F 3 "" H 6275 3125 60  0001 C CNN
+	1    6900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2800 7050 3100
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX2
+U 1 1 66A191A2
+P 7500 3150
+F 0 "MX2" H 7533 3373 60  0000 C CNN
+F 1 "MX-NoLED" H 7533 3299 20  0000 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U" H 6875 3125 60  0001 C CNN
+F 3 "" H 6875 3125 60  0001 C CNN
+	1    7500 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3100 7650 2800
+Text GLabel 7650 2800 1    50   Input ~ 0
+COL1
+Text GLabel 4750 2350 2    50   Input ~ 0
+COL0
+Text GLabel 4750 2450 2    50   Input ~ 0
+COL1
 $EndSCHEMATC
